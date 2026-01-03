@@ -13,14 +13,16 @@ def build_mcp_servers():
         cache_tools_list=True,
         max_retry_attempts=2,
     )
-    newsnow = MCPServerStdio(
-        name="newsnow",
+
+    rss_news = MCPServerStdio(
+        name="rss",
         params={
-            "command": "uvx",
-            "args": ["mcp-newsnow"],
+            "command": "node",
+            "args": ["dist/index.js"],
+            "cwd": "rss-mcp",
             "timeout": 20,
         },
         cache_tools_list=True,
         max_retry_attempts=2,
     )
-    return [open_meteo, newsnow]
+    return [open_meteo, rss_news]

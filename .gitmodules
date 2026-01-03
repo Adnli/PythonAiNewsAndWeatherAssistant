@@ -1,3 +1,6 @@
 [submodule "open-meteo-mcp"]
 	path = open-meteo-mcp
 	url = https://github.com/cmer81/open-meteo-mcp.git
+[submodule "rss-mcp"]
+	path = rss-mcp
+	url = https://github.com/veithly/rss-mcp.git
